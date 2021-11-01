@@ -5,6 +5,7 @@ const {balance} = require("./account");
 
 function getBalance() {
   //TODO: Return the customer's acct. balance
+  return balance;
 }
 
 function withdraw(withdrawAmount) {

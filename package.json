@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/JoshuaB94/nodeATMStarter/issues"
   },
-  "homepage": "https://github.com/JoshuaB94/nodeATMStarter#readme"
+  "homepage": "https://github.com/JoshuaB94/nodeATMStarter#readme",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
 }
