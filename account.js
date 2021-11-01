@@ -5,3 +5,7 @@
 //TODO: Create variables for account balance & account pin
 
 //Export these variables
+
+let accountPin = 6098
+let accountBalance = '$' + 15500;
+// console.log(accountBalance);
