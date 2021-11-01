@@ -14,6 +14,7 @@ function withdraw(withdrawAmount) {
   // Log the current balance after withdrawal is made
   let withdrawalAmount = parseInt(prompt('Enter the desired amount you want to withdraw '));
   let withdrawalBalance = 'Your balance after withdrawal is ' + parseInt(getBalance() - withdrawalAmount);
+
   console.log(withdrawalBalance);
 }
 
@@ -22,6 +23,7 @@ function deposit(depositAmount) {
   // Log the current balance after deposit is made
   let depositAmountMade = parseInt(prompt('Enter the amount that you will be depositing '));
   let depositBalance = 'Your balance after deposit is ' + parseInt(getBalance() + depositAmountMade);
+
   console.log(depositBalance)
 }
 
@@ -30,11 +32,26 @@ function validatePin(enteredPin) {
   //Allow access to ATM if matching
   //Return value should be a Boolean (true or false)
   //In English: if the PIN entered is correct, return True. Otherwise, return False.
+  let correctPin = parseInt(pin);
+  let userPin = "";
 
+  while(userPin != correctPin){
+    userPin = parseInt(prompt('Enter your pin number '));
+    if(userPin === correctPin){
+      console.log('Account Owner is Confirmed!');
+    } else {
+      console.log('Incorrect Pin. Please Try Again');
+    }
+  }
 }
 
 //TODO: Export these functions
-
+module.exports = {
+accountBalance: getBalance,
+accountWithdrawal: withdraw,
+accountDeposit: deposit,
+accountValidation: validatePin
+}
 
 //Testing Area-Thallium
 // let pinNumber = pin;
@@ -48,3 +65,4 @@ function validatePin(enteredPin) {
 
 // withdraw();
 // deposit();
+// validatePin();
