@@ -6,6 +6,13 @@
 
 //Export these variables
 
+//Variables for Account Pin and Balance
 let accountPin = 6098
 let accountBalance = '$' + 15500;
 // console.log(accountBalance);
+
+//Exporting of Variables
+module.exports = {
+    pin: accountPin,
+    balance: accountBalance
+}
