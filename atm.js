@@ -6,7 +6,7 @@ const prompt = require("prompt-sync")();
 
 function getBalance() {
   //TODO: Return the customer's acct. balance
-  return balance;
+  return balance
 }
 
 function withdraw(withdrawAmount) {
@@ -66,3 +66,5 @@ accountValidation: validatePin
 // withdraw();
 // deposit();
 // validatePin();
+//getBalance();
+

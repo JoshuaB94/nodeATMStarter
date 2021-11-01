@@ -9,16 +9,18 @@ const {accountBalance} = require("./atm");
 const {accountWithdrawal} = require("./atm");
 const {accountDeposit} = require("./atm");
 const {accountValidation} = require("./atm");
-const {prompt} = require("prompt-sync")();
+const prompt = require("prompt-sync")();
 
 
 function accessATM() {
   //TODO: Prompt users for their pin
   //Use ATM.js validatePin function to verify pin matches
   //Proceed to main menu ONLY if they match
+  accountValidation();
 }
 
 //TODO: Call accessATM function
+accessATM();
 
 function mainMenu() {
   //TODO: Set up a main menu.  Prompt users for ATM selection to do the following:
@@ -28,6 +30,31 @@ function mainMenu() {
   //Make a withdrawal
   //Restart
   //Quit
+  let atmMenu = prompt("What kind of transaction would you like to do today?" + '\n' 
+    + '1 - Get Current Balance\n'
+    + '2 - Make a Deposit\n'
+    + '3 - Make a Withdrawal\n'
+    + '4 - Quit Transaction\n');
+
+  switch (atmMenu){
+    case "1":
+      accountBalance();
+      return mainMenu();
+    case "2":
+      accountDeposit();
+      return mainMenu();
+    case "3":
+      accountWithdrawal();
+      return mainMenu();
+    case "4":
+      return; //Quit Transaction
+    default:
+      return mainMenu(); //Restarts Main Menu
+  }
 }
 
 //TODO: Call mainMenu function to start our app!
+mainMenu();
+
+
+//Testing Area-Thallium
