@@ -1,5 +1,7 @@
 "use strict";
 //TODO: Import necessary values from account.js
+const {pin} = require("./account");
+const {balance} = require("./account");
 
 function getBalance() {
   //TODO: Return the customer's acct. balance
@@ -23,3 +25,11 @@ function validatePin(enteredPin) {
 }
 
 //TODO: Export these functions
+
+
+//Testing Area-Thallium
+// let pinNumber = pin;
+// console.log(`This is my pin number: ${pinNumber}`)
+
+// let bankBalance = balance;
+// console.log(`This is my bank account balance: ${bankBalance}`);
