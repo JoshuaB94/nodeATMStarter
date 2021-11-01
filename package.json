@@ -1,0 +1,19 @@
+{
+  "name": "nodeatmstarter",
+  "version": "1.0.0",
+  "description": "First Week 3 devCodeCamp Project. In-depth description coming soon!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoshuaB94/nodeATMStarter.git"
+  },
+  "author": "Joshua Berrios",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoshuaB94/nodeATMStarter/issues"
+  },
+  "homepage": "https://github.com/JoshuaB94/nodeATMStarter#readme"
+}
