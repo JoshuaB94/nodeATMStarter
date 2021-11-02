@@ -38,7 +38,7 @@ function mainMenu() {
 
   switch (atmMenu){
     case "1":
-      accountBalance();
+      console.log(accountBalance());
       return mainMenu();
     case "2":
       accountDeposit();
